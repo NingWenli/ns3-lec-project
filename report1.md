@@ -1,4 +1,4 @@
-# ns3-lec-project
+# report1
 ##1.task1
     以Hello-simulator.cc为示例，并在新的要求下完成任务用命令行读入的自己的学号和姓名参数以及输出频率，周期性输出姓名和学号，
     不能使用硬编码。
