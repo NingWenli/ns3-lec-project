@@ -15,4 +15,4 @@
 
 ##task3
 ###设置STA的移动轨迹为线性远离AP
-![](http://ww4.sinaimg.cn/mw1024/e5334a89gw1f58o8c70oyj20fb07d0ts.jpg)
+![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f58nv8ynsaj20gm044wgf.jpg)
