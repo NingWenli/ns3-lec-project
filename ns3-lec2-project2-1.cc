@@ -217,9 +217,9 @@ main (int argc, char *argv[])
 
   if (tracing == true)
     {
-      pointToPoint.EnablePcapAll ("project2");
-      phy.EnablePcap ("project2", apDevices.Get (0));
-      csma.EnablePcap ("project2", csmaDevices.Get (0), true);
+      pointToPoint.EnablePcapAll ("ns3-lec2-project2-1");
+      phy.EnablePcap ("ns3-lec2-project2-1", apDevices.Get (0));
+      csma.EnablePcap ("ns3-lec2-project2-1", csmaDevices.Get (0), true);
     }
 
   Simulator::Run ();
