@@ -146,8 +146,8 @@ main (int argc, char *argv[])
                                  "GridWidth", UintegerValue (3),
                                  "LayoutType", StringValue ("RowFirst"));
 
-  //配置STA移动方式，RandomWalk2dMobilityModel，随机游走模型
-  mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
+  //配置STA移动方式，RandomWalk2dMobilityModel， 固定速度模型
+  mobility.SetMobilityModel ("ns3::ConstantVelocityMobilityModel");
   mobility.Install (wifiStaNodes);
 
 //配置AP移动方式，ConstantPositionMobilityModel，固定位置模型
