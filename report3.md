@@ -30,7 +30,7 @@
   
     首先声明一个AsciiTraceHelper对象，分别用p2p信道和csma信道对其激活，生成p2p信道的tr文件和csma信道的tr文件。 
     输出三种信道的pcap文件。
-  ![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5fv1tbyjaj20dh057aat.jpg)
+![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5fv1tbyjaj20dh057aat.jpg)
     
 
 ##3.Task3
@@ -42,6 +42,10 @@
 
 ##4.Task4
 ###Wireshark查看文件截图
+
+    在所要查看的pacp文件右击，选择用wireshark打开，可以看到分析结果：
+
+![](http://ww2.sinaimg.cn/mw1024/e5334a89gw1f5fvp45nn8j20kj0g1ah5.jpg)
 
 ##5.Task5
 ###Matlab表格
