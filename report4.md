@@ -18,18 +18,32 @@
 4、Mac类型为：NqosWifiMacHelper（没有QoS保障的Mac层机制）
 
     NqosWifiMacHelper mac1 = NqosWifiMacHelper::Default ();
-5、移动模型为随机游走模型，设定初始位置为两个六边形，边长10m，sta在6个顶点上，ap在六边形中间；两个六边形中心相距50m
+5、移动模型为随机游走模型，设定初始位置为两个六边形，边长10m，sta在6个顶点上，ap在六边形中间；两个六边形中心
+相距50m
+
 ![](http://ww4.sinaimg.cn/mw1024/e5334a89gw1f5gv9nfx3uj20er0c3gqs.jpg)
-![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5gv9lbqa8j20jq04yq4z.jpg)
+![](http://ww1.sinaimg.cn/mw1024/e5334a89gw1f5gvg14dxej20jg04uq53.jpg)
   
 6、packet size为512byte，包间隔为100ms
 ![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5gv9mjcxqj20gu01wdh0.jpg)
 ##2.Task2
 ###PyViz截图
+
+    在运行脚本后加 --vis命令，打开可视化界面，如下图所示：
 ![](http://ww1.sinaimg.cn/mw1024/e5334a89gw1f5gv9l7yz2j20i30eiwfy.jpg)
 ![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5gv9m8k8rj20hy0eyabu.jpg)
+
+    如图所示sta初始位置位于两个六边形的定点上，两个ap分别位于两个六边形中间。
+    点击simulate进行仿真，发现sta为随机游走模式，ap为固定位置模式。
+
 ##3.Task3
 ###Tracing的两种信道文件
+
+    在Simulator::Run ();之前执行如下语句：
+![](http://ww2.sinaimg.cn/mw1024/e5334a89gw1f5gvmz4zjvj20jg03jt9h.jpg)
+
+    得到如下两个tracing文件：
+![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5gvmzc8frj208n02raa3.jpg)
 
 ##3.Task3
 ###Matlab处理后的图表
