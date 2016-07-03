@@ -8,50 +8,28 @@
 2、场景范围：500m*500m
 
     设置场景范围
-    mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel", "Bounds", RectangleValue (Rectangle (0, 500, 0, 500)));
+    mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel","Bounds", RectangleValue (Rectangle (0, 500, 0, 500)));
     mobility.Install (wifi1StaNodes);
-    mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel", "Bounds", RectangleValue (Rectangle (0, 500, 0, 500)));
-3、传播模型为：ConstantSpeedPropagationDelayModel
+    mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel","Bounds", RectangleValue (Rectangle (0, 500, 0, 500)));
+3、传播模型为：ConstantSpeedPropagationDelayMode
+
     YansWifiChannelHelper channel1 = YansWifiChannelHelper::Default (); 
     channel1.SetPropagationDelay("ns3::ConstantSpeedPropagationDelayModel");
 4、Mac类型为：NqosWifiMacHelper（没有QoS保障的Mac层机制）
+
     NqosWifiMacHelper mac1 = NqosWifiMacHelper::Default ();
 5、移动模型为随机游走模型，设定初始位置为两个六边形，边长10m，sta在6个顶点上，ap在六边形中间；两个六边形中心相距50m
-    //配置移动模型，起始位置 
-   MobilityHelper mobility;  
-   Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();  
-   //设置wifi1网络的sta节点位置 
-   positionAlloc->Add (Vector (10.0, 0.0, 0.0));  
-   positionAlloc->Add (Vector (5.0, 8.66, 0.0));  
-   positionAlloc->Add (Vector (10.0, 17.32, 0.0));  
-   positionAlloc->Add (Vector (20.0, 17.32, 0.0));  
-   positionAlloc->Add (Vector (25.0, 8.66, 0.0));  
-   positionAlloc->Add (Vector (20.0, 0.0, 0.0)); 
-   //设置wifi2网络的sta节点位置 
-   positionAlloc->Add (Vector (60.0, 0.0, 0.0));  
-   positionAlloc->Add (Vector (55.0, 8.66, 0.0));  
-   positionAlloc->Add (Vector (60.0, 17.32, 0.0));  
-   positionAlloc->Add (Vector (70.0, 17.32, 0.0));  
-   positionAlloc->Add (Vector (75.0, 8.66, 0.0));  
-   positionAlloc->Add (Vector (70.0, 0.0, 0.0)); 
-  //设置wifi1和wifi2的Ap节点的位置 
-   positionAlloc->Add (Vector (15.0, 8.66, 0.0));  
-   positionAlloc->Add (Vector (65.0, 8.66, 0.0)); 
-   mobility.SetPositionAllocator (positionAlloc);  
-
+![](http://ww4.sinaimg.cn/mw1024/e5334a89gw1f5gv9nfx3uj20er0c3gqs.jpg)
+![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5gv9lbqa8j20jq04yq4z.jpg)
   
-  //配置STA移动方式，RandomWalk2dMobilityModel，随机游走模型
-  mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel","Bounds", RectangleValue (Rectangle (0, 500, 0, 500)));
-  mobility.Install (wifi1StaNodes);
-  mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel","Bounds", RectangleValue (Rectangle (0, 500, 0, 500)));
-  mobility.Install (wifi2StaNodes);
 6、packet size为512byte，包间隔为100ms
-    UdpEchoClientHelper echoClient (interfaces.GetAddress(nWifi2-1),9);
-    echoClient.SetAttribute ("MaxPackets", UintegerValue (1));
-    echoClient.SetAttribute ("Interval", TimeValue (Seconds (0.1)));
-    echoClient.SetAttribute ("PacketSize", UintegerValue (512));
-
+![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5gv9mjcxqj20gu01wdh0.jpg)
 ##2.Task2
+###PyViz截图
+![](http://ww1.sinaimg.cn/mw1024/e5334a89gw1f5gv9l7yz2j20i30eiwfy.jpg)
+![](http://ww3.sinaimg.cn/mw1024/e5334a89gw1f5gv9m8k8rj20hy0eyabu.jpg)
 ##3.Task3
+###Tracing的两种信道文件
 
 ##3.Task3
+###Matlab处理后的图表
